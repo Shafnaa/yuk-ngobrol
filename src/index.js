@@ -46,11 +46,9 @@ class DiriSendiri extends React.Component {
       // }));
       return (
         <>
-          <div className="card">
-            <button name="" className="chosen diri-sendiri title-chosen" onClick={() => this.handleClick}>
-              Diri Sendiri
-            </button>
-          </div>
+          <button name="" className="chosen diri-sendiri title-chosen" onClick={this.props.onClick}>
+            Diri Sendiri
+          </button>
           <div className="content-container">
             <p className="content">"{status}"</p>
           </div>
@@ -100,11 +98,9 @@ class MasaLalu extends React.Component {
       let status = this.state.quest[n];
       return (
         <>
-          <div className="card">
-            <button name="" className="chosen masa-lalu title-chosen" onClick={() => this.handleClick}>
-              Masa Lalu
-            </button>
-          </div>
+          <button name="" className="chosen masa-lalu title-chosen" onClick={this.props.onClick}>
+            Masa Lalu
+          </button>
           <div className="content-container">
             <p className="content">"{status}"</p>
           </div>
@@ -154,11 +150,9 @@ class Hubungan extends React.Component {
       let status = this.state.quest[n];
       return (
         <>
-          <div className="card">
-            <button name="" className="chosen hubungan title-chosen" onClick={() => this.handleClick}>
-              Hubungan
-            </button>
-          </div>
+          <button name="" className="chosen hubungan title-chosen" onClick={this.props.onClick}>
+            Hubungan
+          </button>
           <div className="content-container">
             <p className="content">"{status}"</p>
           </div>
@@ -208,11 +202,9 @@ class Kehidupan extends React.Component {
       let status = this.state.quest[n];
       return (
         <>
-          <div className="card">
-            <button name="" className="chosen kehidupan title-chosen" onClick={() => this.handleClick}>
-              Dare
-            </button>
-          </div>
+          <button name="" className="chosen kehidupan title-chosen" onClick={this.props.onClick}>
+            Dare
+          </button>
           <div className="content-container">
             <p className="content">"{status}"</p>
           </div>
@@ -225,7 +217,7 @@ class Kehidupan extends React.Component {
 }
 
 const Buttons = ({ onToggle }) => (
-  <div className="card">
+  <>
     <div className="option ">
       <button name="DiriSendiri" className="button-option diri-sendiri" onClick={onToggle}></button>
       <div className="card-name">
@@ -250,25 +242,17 @@ const Buttons = ({ onToggle }) => (
         <p className="title">Dare</p>
       </div>
     </div>
-  </div>
+  </>
 );
 
-const Main = ({ activeSection }) => (
+const Main = ({ activeSection, onClick }) => (
   <React.Fragment>
-    <DiriSendiri activeSection={activeSection} />
-    <MasaLalu activeSection={activeSection} />
-    <Hubungan activeSection={activeSection} />
-    <Kehidupan activeSection={activeSection} />
+    <DiriSendiri activeSection={activeSection} onClick={onClick} />
+    <MasaLalu activeSection={activeSection} onClick={onClick} />
+    <Hubungan activeSection={activeSection} onClick={onClick} />
+    <Kehidupan activeSection={activeSection} onClick={onClick} />
   </React.Fragment>
 );
-
-function Reset(props) {
-  return (
-    <button name="App" className="reset-button" onClick={props.onClick}>
-      reset
-    </button>
-  );
-}
 
 class App extends React.Component {
   constructor(props) {
@@ -300,11 +284,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <section className="App">
+      <div className="card">
         {this.show ? <Buttons onToggle={this.handleToggleSection} /> : null}
-        <Main activeSection={this.state.activeSection} />
-        <Reset onClick={this.handleClickSection} />
-      </section>
+        <Main activeSection={this.state.activeSection} onClick={this.handleToggleSection} />
+      </div>
     );
   }
 }
