@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/yuk-ngobrol/static/css/main.fbf25cef.css",
-    "main.js": "/yuk-ngobrol/static/js/main.47a0a592.js",
+    "main.css": "/yuk-ngobrol/static/css/main.e1790f16.css",
+    "main.js": "/yuk-ngobrol/static/js/main.fdf09a66.js",
     "static/media/cute-doodle-with-cloud-rainbow-sun-animal-vector-removebg-preview.png": "/yuk-ngobrol/static/media/cute-doodle-with-cloud-rainbow-sun-animal-vector-removebg-preview.7e1679d4f846055b28a5.png",
     "static/media/Skrapbook.ttf": "/yuk-ngobrol/static/media/Skrapbook.4dadf926aff55d1ac12b.ttf",
     "index.html": "/yuk-ngobrol/index.html",
-    "main.fbf25cef.css.map": "/yuk-ngobrol/static/css/main.fbf25cef.css.map",
-    "main.47a0a592.js.map": "/yuk-ngobrol/static/js/main.47a0a592.js.map"
+    "main.e1790f16.css.map": "/yuk-ngobrol/static/css/main.e1790f16.css.map",
+    "main.fdf09a66.js.map": "/yuk-ngobrol/static/js/main.fdf09a66.js.map"
   },
   "entrypoints": [
-    "static/css/main.fbf25cef.css",
-    "static/js/main.47a0a592.js"
+    "static/css/main.e1790f16.css",
+    "static/js/main.fdf09a66.js"
   ]
 }
