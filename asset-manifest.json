@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/card-game/static/css/main.510acd90.css",
+    "main.js": "/card-game/static/js/main.47a0a592.js",
+    "static/media/cute-doodle-with-cloud-rainbow-sun-animal-vector-removebg-preview.png": "/card-game/static/media/cute-doodle-with-cloud-rainbow-sun-animal-vector-removebg-preview.7e1679d4f846055b28a5.png",
+    "static/media/Skrapbook.ttf": "/card-game/static/media/Skrapbook.4dadf926aff55d1ac12b.ttf",
+    "index.html": "/card-game/index.html",
+    "main.510acd90.css.map": "/card-game/static/css/main.510acd90.css.map",
+    "main.47a0a592.js.map": "/card-game/static/js/main.47a0a592.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.510acd90.css",
+    "static/js/main.47a0a592.js"
+  ]
+}
