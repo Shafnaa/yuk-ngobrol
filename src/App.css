@@ -1,38 +1,159 @@
-.App {
+@font-face {
+  font-family: skrapbook;
+  src: url("../font/Skrapbook.ttf");
+}
+
+body,
+section {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-family: skrapbook, sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-family: skrapbook, sans-serif;
+}
+
+.card {
+  width: 100%;
+  max-width: 360px;
+  height: 720px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #c6e9f7;
+  position: absolute;
+}
+
+.card-chosen {
+  width: 320px;
+  height: 640px;
+  border-radius: 16px;
+  display: flex;
+  background-color: #c6e9f7;
+  position: absolute;
+}
+
+.option {
+  width: 160px;
+  height: 320px;
+  border-radius: 16px;
+  position: relative;
+  padding-top: 12px;
+
+  font-family: skrapbook, sans-serif;
+  color: #ffffff;
+}
+
+.button-option {
+  width: 160px;
+  height: 320px;
+  border-radius: 16px;
+  position: absolute;
+
+  background-image: url("../image/cute-doodle-with-cloud-rainbow-sun-animal-vector-removebg-preview.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.card-name {
+  width: 160px;
+  height: 48px;
+  position: absolute;
+  border-radius: 16px;
+  bottom: 0px;
+  /* top: 272px; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: transparent;
+}
+
+.chosen {
+  width: 320px;
+  height: 640px;
+  border-radius: 16px;
+  display: flex;
+  position: absolute;
+
+  background-image: url("../image/cute-doodle-with-cloud-rainbow-sun-animal-vector-removebg-preview.png");
+  background-size: cover;
+  background-position: center;
+
+  color: #ffffff;
+}
+
+.diri-sendiri {
+  background-color: #1e6d8c;
+}
+
+.masa-lalu {
+  background-color: #f8a801;
+}
+
+.hubungan {
+  background-color: #fa7998;
+}
+
+.kehidupan {
+  background-color: #169643;
+}
+
+.title {
+  font-size: 24px;
+  color: rgb(255, 255, 255);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title-chosen {
+  font-size: 48px;
+  font-family: skrapbook, sans-serif;
+  /* bottom: 14px;
+  left: 16px;
+  position: fixed; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.content-container {
+  background-color: white;
+  height: 240px;
+  width: 240px;
+  top: 160px;
+  border-radius: 16px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: absolute;
 }
 
-.App-link {
-  color: #61dafb;
+.content {
+  width: 240px;
+  height: auto;
+
+  color: black;
+  font-size: 24px;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hide {
+  display: none;
+}
+
+.reset-button {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  top: 698px;
 }
