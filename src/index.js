@@ -259,10 +259,11 @@ class App extends React.Component {
     super(props);
     this.state = {
       activeSection: "",
+      isFlipped: false,
     };
 
     this.handleToggleSection = this.handleToggleSection.bind(this);
-    this.handleClickSection = this.handleClickSection.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleToggleSection(e) {
@@ -270,12 +271,12 @@ class App extends React.Component {
     this.setState(() => ({
       activeSection: name,
     }));
+    this.handleClick();
   }
 
-  handleClickSection() {
-    this.setState(() => ({
-      activeSection: "",
-    }));
+  handleClick(e) {
+    e.preventDefault();
+    this.setState((prevState) => ({ isFlipped: !prevState.isFlipped }));
   }
 
   get show() {
@@ -284,10 +285,12 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="card">
-        {this.show ? <Buttons onToggle={this.handleToggleSection} /> : null}
-        <Main activeSection={this.state.activeSection} onClick={this.handleToggleSection} />
-      </div>
+      <>
+        <div className="card">
+          {this.show ? <Buttons onToggle={this.handleToggleSection} /> : null}
+          <Main activeSection={this.state.activeSection} onClick={this.handleToggleSection} />
+        </div>
+      </>
     );
   }
 }
